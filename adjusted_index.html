@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Resume Builder</title>
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="html-resume-main/style.css" media="all" rel="stylesheet" type="text/css">
+    </link>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-container">
+            <section id="section-information">
+                <h2>Information</h2>
+                <input id="info-name" placeholder="Name" type="text" />
+                <input id="info-email" placeholder="Email" type="text" />
+                <input id="info-mobile" placeholder="Mobile" type="text" />
+                <input id="info-github" placeholder="Github" type="text" />
+                <input id="info-linkedin" placeholder="LinkedIn" type="text" />
+            </section>
+            <section id="section-summary">
+                <h2>Summary</h2>
+                <textarea id="summary-text" placeholder="About Yourself"></textarea>
+            </section>
+            <section id="section-experiences">
+                <section class="experiences">
+                    <h2>Experiences</h2>
+                    <h4>Experience 1</h4>
+                    <input id="experience-1" placeholder="Position 1" type="text" />
+                </section>
+
+                <button class="add-experience" data-count="1">Add More Position</button>
+            </section>
+            <section id="section-education">
+                <h2>Degree</h2>
+                <input id="education-1" placeholder="Degree 1" type="text" />
+                <button class="add-education" data-count="1">Add More Degree</button>
+            </section>
+            <section id="section-skills">
+                <h2>Skill</h2>
+                <input id="skill-1" placeholder="Skill 1" type="text" />
+                <button class="add-skill" data-count="1">Add More Skill</button>
+            </section>
+            <button id="savePdf" onclick="window.print();">Save as PDF</button>
+        </div>
+        <div class="preview-container">
+        </div>
+    </div>
+    <script src="assets/js/dynamic_form.js"></script>
+</body>
+
+</html>

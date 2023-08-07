@@ -1,0 +1,73 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-container,
+.preview-container {
+    width: 48%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* A4 Preview */
+.preview-container {
+    width: 210mm;  /* A4 width */
+    height: 297mm; /* A4 height */
+    overflow: hidden; /* Hide any content that exceeds the container */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Print Styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .preview-container, .preview-container * {
+        visibility: visible;
+        font-size: 90%;  /* Adjust font size to fit content within one page */
+        line-height: 1.2; /* Adjust line spacing */
+    }
+    .preview-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 210mm;  /* A4 width */
+        height: 297mm; /* A4 height */
+        box-shadow: none; /* Remove any box shadow */
+        padding: 10mm;  /* Padding to ensure content doesn't touch the edge */
+        box-sizing: border-box; /* Include padding in total width/height */
+    }
+}

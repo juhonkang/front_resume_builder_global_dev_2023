@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume Builder</title>
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/resumes.css" media="all" />
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="form-container">
+			<section id="section-information">
+				<h2>Information</h2>
+				<input id="info-name" type="text" placeholder="Name">
+				<input id="info-email" type="text" placeholder="Email">
+				<input id="info-mobile" type="text" placeholder="Mobile">
+				<input id="info-github" type="text" placeholder="Github">
+				<input id="info-linkedin" type="text" placeholder="LinkedIn">
+			</section>
+
+			<section id="section-summary">
+				<h2>Summary</h2>
+				<textarea id="summary-text" placeholder="About Yourself"></textarea>
+			</section>
+
+			<section id="section-experiences">
+				<h2>Experience</h2>
+				<div id="experience_">
+					<div class="experience">
+						<h4>Experience 1</h4>
+						<input type="text" placeholder="start_year" class="start_year">
+						<input type="text" placeholder="end_year" class="end_year">
+						<input type="text" placeholder="position" class="position">
+						<input type="text" placeholder="company" class="company">
+						<input type="text" placeholder="location" class="location">
+						<input type="text" placeholder="description" class="description1">
+						<input type="text" placeholder="description" class="description2">
+					</div>
+				</div>
+				<button id="add-experience">Add Experience</button>
+			</section>
+
+			<section id="section-education">
+				<h2>Education</h2>
+				<div id="education_">
+					<div class="education">
+						<h4>Education 1</h4>
+						<input type="text" placeholder="start_year" class="start_year">
+						<input type="text" placeholder="end_year" class="end_year">
+						<input type="text" placeholder="Degree name" class="degree">
+						<input type="text" placeholder="University/College" class="university">
+						<input type="text" placeholder="Faculty" class="faculty">
+						<input type="text" placeholder="GPA" class="gpa">
+						<input type="text" placeholder="description" class="description1">
+						<input type="text" placeholder="description" class="description2">
+
+					</div>
+				</div>
+				<button id="add-education">Add Education</button>
+			</section>
+
+			<section id="section-skills">
+				<h2>Skills</h2>
+				<div id="skills_">
+					<input type="text" placeholder="Skill" class="skill">
+				</div>
+				<button id="add-skill">Add Skill</button>
+			</section>
+
+			<button id="savePdf onclick="window.print();">Save as PDF</button>
+		</div>
+
+		<div class="preview-container">
+
+		</div>
+
+	</div>
+
+	<script src="assets/js/updated_dynamic_form.js"></script>
