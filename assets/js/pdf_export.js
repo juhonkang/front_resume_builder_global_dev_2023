@@ -1,32 +1,39 @@
+// document.getElementById('savePdf').addEventListener('click', function() {
+//     const { jsPDF } = window.jspdf;
+//     const doc = new jsPDF();
+//     const element = document.querySelector('.preview-container');
 
-// // Function to print the content of the div with class "preview-container"
-// function printPDF() {
-//     // Get the content of the div with class "preview-container"
-//     const previewContainer = document.querySelector('.preview-container');
-    
-//     // Create a new window to print
-//     const printWindow = window.open('', '_blank');
-    
-//     // Write the CSS links, content of the preview-container div, and styles for A4 size to the new window
-//     printWindow.document.write('<html><head><title>Print PDF</title>');
-    
-//     // Including linked stylesheets
-//     printWindow.document.write('<link rel="stylesheet" href="assets/css/styles.css" type="text/css" media="print">'); 
-//     printWindow.document.write('<link rel="stylesheet" type="text/css" href="assets/css/resumes.css" media="print">');
-    
-//     // Additional styles to make the content fit into an A4 page size
-//     printWindow.document.write('<style>@page { size: A4; margin: 0; } body { margin: 0; } .preview-container { width: 100%; box-sizing: border-box; page-break-before: always; }</style>');
-    
-//     printWindow.document.write('</head><body>');
-//     printWindow.document.write(previewContainer.innerHTML);
-//     printWindow.document.write('</body></html>');
-    
-//     // Close the document and trigger the print dialog
-//     printWindow.document.close();
-//     printWindow.focus();
-//     printWindow.print();
-//     printWindow.close();
-// }
+//     html2canvas(element).then(canvas => {
+//         const imgData = canvas.toDataURL('image/png');
+//         const imgProps = doc.getImageProperties(imgData);
+//         const pdfWidth = doc.internal.pageSize.getWidth();
+//         const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+//         doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+//         doc.save('download.pdf');
+//     });
+// });
 
-// // Add a click event listener to the button with ID "print-pdf-btn" to trigger the printPDF function
-// document.getElementById('savePdf').addEventListener('click', printPDF);
+
+
+function printReceipt() {
+    var w = window.open();
+  
+    w.document.write('<html><head><title></title>');
+    w.document.write('<link rel="stylesheet" type="text/css" href="assets/css/styles.css" media="all">');
+    w.document.write('<link rel="stylesheet" type="text/css" href="assets/css/resumes.css" media="all" />');
+
+    w.document.write('<link rel="stylesheet" type="text/css" href="dep/normalize.css/normalize.css" media="all" />');
+    w.document.write('<link rel="stylesheet" type="text/css" href="dep/Font-Awesome/css/font-awesome.css" media="all" />');
+    w.document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" media="all"/>');
+    // w.document.write('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" media="all" />');
+    // w.document.write('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" media="all" />');
+    w.document.write('</head><body >');
+    w.document.write(document.querySelector('.preview-container').innerHTML);
+    w.document.write('<script type="text/javascript">addEventListener("load", () => { print(); close(); })</script></body></html>');
+  
+    w.document.close();
+    w.focus();
+  }
+  
+
+  document.getElementById('savePdf').addEventListener('click', printReceipt);

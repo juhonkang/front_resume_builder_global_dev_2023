@@ -5,8 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Resume Builder</title>
-	<link rel="stylesheet" href="assets/css/styles.css" media="all">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" media="all">
 	<link rel="stylesheet" type="text/css" href="assets/css/resumes.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="dep/normalize.css/normalize.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="dep/Font-Awesome/css/font-awesome.css" media="all"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" media="all"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
 
 </head>
 
@@ -24,7 +29,7 @@
 
 			<section id="section-summary">
 				<h2>Summary</h2>
-				<textarea id="summary-text" placeholder="Summary"></textarea>
+				<textarea id="summary-text" placeholder="About Yourself"></textarea>
 			</section>
 
 			<section id="section-experiences">
@@ -71,7 +76,7 @@
 				<button id="add-skill">Add Skill</button>
 			</section>
 
-			<button id="savePdf onclick="window.print();">Save as PDF</button>
+			<button id="savePdf">Save as PDF</button>
 		</div>
 
 		<div class="preview-container">
@@ -80,5 +85,7 @@
 
 	</div>
 
-	<script src="assets/js/pdf_export.js"></script>
 	<script src="assets/js/updated_dynamic_form.js"></script>
+	<script src="assets/js/pdf_export.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
