@@ -1,3 +1,4 @@
+
 // // Function to print the content of the div with class "preview-container"
 // function printPDF() {
 //     // Get the content of the div with class "preview-container"
@@ -9,10 +10,9 @@
 //     // Write the CSS links, content of the preview-container div, and styles for A4 size to the new window
 //     printWindow.document.write('<html><head><title>Print PDF</title>');
     
-//     // Copying over all the linked and inline stylesheets
-//     Array.from(document.querySelectorAll('link[rel="stylesheet"], style')).forEach(link => {
-//         printWindow.document.write(link.outerHTML);
-//     });
+//     // Including linked stylesheets
+//     printWindow.document.write('<link rel="stylesheet" href="assets/css/styles.css" type="text/css" media="print">'); 
+//     printWindow.document.write('<link rel="stylesheet" type="text/css" href="assets/css/resumes.css" media="print">');
     
 //     // Additional styles to make the content fit into an A4 page size
 //     printWindow.document.write('<style>@page { size: A4; margin: 0; } body { margin: 0; } .preview-container { width: 100%; box-sizing: border-box; page-break-before: always; }</style>');

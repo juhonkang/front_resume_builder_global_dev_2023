@@ -399,6 +399,42 @@ body > * {
 #sidebar {
   height: var(--page-height);
 }
-/* .noprint {
+.noprint {
   background-color: grey;
-} */
+}
+
+
+
+/* A4 Preview */
+.preview-container {
+  width: 128;  /* A4 width */
+  height: 297mm; /* A4 height */
+  overflow: hidden; /* Hide any content that exceeds the container */
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+      visibility: hidden;
+  }
+  .preview-container, .preview-container * {
+      visibility: visible;
+      font-size: 90%;  /* Adjust font size to fit content within one page */
+      line-height: 1.2; /* Adjust line spacing */
+  }
+  .preview-container {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 210mm;  /* A4 width */
+      height: 297mm; /* A4 height */
+      box-shadow: none; /* Remove any box shadow */
+      padding: 10mm;  /* Padding to ensure content doesn't touch the edge */
+      box-sizing: border-box; /* Include padding in total width/height */
+      background-color: white; /* Ensure background is white when printing */
+      margin: 0 auto; /* Center the content horizontally */
+  }
+}
