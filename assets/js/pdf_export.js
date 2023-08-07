@@ -25,8 +25,6 @@ function printReceipt() {
     w.document.write('<link rel="stylesheet" type="text/css" href="dep/normalize.css/normalize.css" media="all" />');
     w.document.write('<link rel="stylesheet" type="text/css" href="dep/Font-Awesome/css/font-awesome.css" media="all" />');
     w.document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" media="all"/>');
-    // w.document.write('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" media="all" />');
-    // w.document.write('<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" media="all" />');
     w.document.write('</head><body >');
     w.document.write(document.querySelector('.preview-container').innerHTML);
     w.document.write('<script type="text/javascript">addEventListener("load", () => { print(); close(); })</script></body></html>');
